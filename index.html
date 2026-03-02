@@ -1,1 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Accounting Journal Entry Game</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Journal Entry → Financial Statements</h1>
+    <div id="score" class="pill">Score: 0</div>
+  </header>
 
+  <main class="grid">
+    <section class="card">
+      <h2>Transaction</h2>
+      <div id="txPrompt" class="prompt"></div>
+      <div class="row">
+        <button id="prevTx">◀</button>
+        <button id="nextTx">Next Transaction ▶</button>
+      </div>
+      <div id="feedback" class="feedback"></div>
+    </section>
+
+    <section class="card">
+      <h2>Journal Entry</h2>
+      <div id="jeLines"></div>
+      <div class="row">
+        <button id="addLine">+ Add line</button>
+        <button id="clearJE">Clear</button>
+        <button id="postJE" class="primary">Post Entry</button>
+      </div>
+      <div class="totals">
+        <div>Debits: <span id="debits">0</span></div>
+        <div>Credits: <span id="credits">0</span></div>
+        <div id="balanced" class="pill">Not Balanced</div>
+      </div>
+    </section>
+
+    <section class="card wide">
+      <h2>Financial Statements (Live)</h2>
+      <div class="statements">
+        <div>
+          <h3>Income Statement</h3>
+          <pre id="incomeStmt"></pre>
+        </div>
+        <div>
+          <h3>Balance Sheet</h3>
+          <pre id="balanceSheet"></pre>
+        </div>
+        <div>
+          <h3>Statement of Stockholders' Equity</h3>
+          <pre id="equityStmt"></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
